@@ -57,8 +57,8 @@ function initializeServiceWorker() {
   if ("serviceWorker" in navigator) {
     window.addEventListener('load', async (_) => {
       try {
-        const registration = await navigator.serviceWorker.register("/sw.js", {
-          scope: "Lab7_Starter/",
+        const registration = await navigator.serviceWorker.register("Lab7_Starter/sw.js", {
+          scope: "/",
         });
         if (registration.active) {
           console.log("Service worker installed and active");
